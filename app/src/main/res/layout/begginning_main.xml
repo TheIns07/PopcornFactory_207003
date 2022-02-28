@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/background_intro"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="490dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/popcorn"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/letters_intro"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        />
+
+    <Button
+        android:layout_width="237dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/round_button"
+        android:text="@string/button_message"
+        android:textColor="@color/white"
+
+        />
+
+</LinearLayout>
