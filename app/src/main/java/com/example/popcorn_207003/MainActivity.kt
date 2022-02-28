@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.GridView
 import kotlinx.android.synthetic.main.activity_detalle_pelicula.view.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.movie.view.*
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         cargarPeliculas()
-
+        var listView: GridView = findViewById(R.id.gridview) as GridView
         adapter = PeliculaAdapter(this,peliculas)
         gridview.adapter = adapter
     }
