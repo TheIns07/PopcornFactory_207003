@@ -25,6 +25,7 @@
         />
 
     <Button
+        android:id="@+id/button_beg"
         android:layout_width="237dp"
         android:layout_height="42dp"
         android:layout_gravity="center_horizontal"

@@ -1,22 +1,23 @@
 package com.example.popcorn_207003
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import kotlinx.android.synthetic.main.activity_detalle_pelicula.*
 
 
 class DetallePelicula : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detalle_pelicula)
+        setContentView(R.layout.begginning_main)
 
-        var bundle = intent.extras
+        var btnMain: Button = findViewById(R.id.button_beg) as Button
 
-        if(bundle != null){
-            iv_pelicula_imagen.setImageResource(bundle.getInt("header"))
-            tv_pelicula_nombre.setText(bundle.getString("nombre"))
-            tv_pelicula_descripcion.setText(bundle.getString("sinopsis"))
-
+        btnMain.setOnClickListener{
+            var intent: Intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
+
     }
 }
