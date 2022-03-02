@@ -24,18 +24,21 @@
             android:scaleType="fitXY"
             android:gravity="center"
             android:layout_gravity="center"
-            android:src="@drawable/bones"/>
+/>
 
         <TextView
             android:id="@+id/tv_pelicula_nombre"
             android:layout_width="match_parent"
-            android:layout_height="67dp"
+            android:layout_height="48dp"
             android:gravity="center"
-            android:paddingRight="240sp"
-            android:text="BONES"
             android:textColor="@color/button_background"
             android:textSize="25sp"
             android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp" />
 
 
     </LinearLayout>
@@ -45,7 +48,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Dr. Temperance Brennan is a brilliant, but lonely,  anthropologist whom is approached by an ambitious FBI agent, named Seely Booth, to help the bureau solve a series of unsolved crimes by identifying the long-dead bodies of missing persons by their bone structure. But both Agent Booth and Dr. Brennan and her team come up again a variety of interference from red tape, corruption, and local noncooperation."
         android:textColor="@color/white"
         android:textSize="15dp" />
 

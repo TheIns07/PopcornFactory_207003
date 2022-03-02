@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.begginning_main)
 
         cargarPeliculas()
         var listView: GridView = findViewById(R.id.gridview) as GridView
