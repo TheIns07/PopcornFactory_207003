@@ -11,7 +11,6 @@ import android.widget.BaseAdapter
 import android.widget.GridView
 import kotlinx.android.synthetic.main.activity_detalle_pelicula.view.*
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.movie.view.*
 
 class MainActivity : AppCompatActivity() {
     var peliculas = ArrayList<Pelicula>()
