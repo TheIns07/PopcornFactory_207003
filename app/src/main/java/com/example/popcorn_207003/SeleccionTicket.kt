@@ -3,10 +3,13 @@ package com.example.popcorn_207003
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.RadioGroup
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
+import android.widget.*
+import kotlinx.android.synthetic.main.activity_detalle_pelicula.*
+import android.widget.RadioButton
+
+
+
 
 class SeleccionTicket : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,9 +28,11 @@ class SeleccionTicket : AppCompatActivity() {
         val confirmar: Button = findViewById(R.id.botonConfirmacion)
 
         confirmar.setOnClickListener{
+            val radioButton = findViewById<View>(posicion) as RadioButton
+            Toast.makeText(this, "Disfruta la pelicula!",Toast.LENGTH_LONG).show()
+            radioButton.setBackgroundResource(R.drawable.radio_disable)
+            radioButton.setChecked(true);
 
-            //por
-            Toast.makeText(this, "Disfruta "+titulo+"!",Toast.LENGTH_LONG).show()
         }
 
         val row1: RadioGroup = findViewById(R.id.row2)
@@ -42,7 +47,7 @@ class SeleccionTicket : AppCompatActivity() {
                 row3.clearCheck()
                 row4.clearCheck()
                 row1.check(checkedID)
-
+                posicion = row1.getCheckedRadioButtonId()
             }
 
         }
@@ -53,6 +58,7 @@ class SeleccionTicket : AppCompatActivity() {
                 row3.clearCheck()
                 row4.clearCheck()
                 row2.check(checkedID)
+                posicion = row2.getCheckedRadioButtonId()
 
             }
 
@@ -64,7 +70,7 @@ class SeleccionTicket : AppCompatActivity() {
                 row1.clearCheck()
                 row4.clearCheck()
                 row3.check(checkedID)
-
+                posicion = row3.getCheckedRadioButtonId()
             }
 
         }
@@ -75,7 +81,7 @@ class SeleccionTicket : AppCompatActivity() {
                 row3.clearCheck()
                 row1.clearCheck()
                 row4.check(checkedID)
-
+                posicion = row1.getCheckedRadioButtonId()
             }
 
         }

@@ -17,31 +17,29 @@ class DetallePelicula : AppCompatActivity() {
         var id = -1;
         var title = "";
 
-        /**var btnMain: Button = findViewById(R.id.button_beg) as Button
+        var btnMain: Button = findViewById(R.id. button_buy_tickets) as Button
 
-        btnMain.setOnClickListener{
-            var intent: Intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
-        */
+
         if(bundle != null){
             ns = bundle.getInt("asientosDisponibles")
             title = bundle.getString("titulo")!!
             iv_pelicula_imagen.setImageResource(bundle.getInt("header"))
-            tv_pelicula_nombre.setText(bundle.getString("nombre"))
+            tv_pelicula_nombre.setText(bundle.getString("titulo"))
             tv_pelicula_descripcion.setText(bundle.getString("sinopsis"))
             seats_left.setText("$ns seats avaliable")
-            id = bundle.getInt("pos")
+            id = bundle.getInt("id")
         }
 
         if(ns == 0){
-            button_buy_tickets.isEnabled = false
+            btnMain.isEnabled = false
         }
         else {
-            button_buy_tickets.setOnClickListener{
+            btnMain.setOnClickListener{
                 val intent: Intent = Intent (this, SeleccionTicket::class.java)
                 intent.putExtra("id", id)
-                intent.putExtra("name", title)
+                intent.putExtra("titulo", title)
+
+                this.startActivity(intent)
 
             }
         }

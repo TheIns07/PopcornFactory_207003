@@ -72,17 +72,17 @@ class CatalogoActivity : AppCompatActivity() {
 
             vista.iv_pelicula_imagen.setOnClickListener(){
 
-                var asientosDisponibles = 20  - pelicula.seats.size
-                Log.d("Asientos","$asientosDisponibles")
+                var asientosDisponibles = 20-pelicula.seats.size
+
+                Log.d("asientosDisponibles","$asientosDisponibles")
                 var intent = Intent(context, DetallePelicula::class.java)
                 intent.putExtra("titulo", pelicula.tituloval)
                 intent.putExtra("imagen", pelicula.image)
                 intent.putExtra("header", pelicula.header)
                 intent.putExtra("sinopsis", pelicula.sinopsis)
-                intent.putExtra("numberSeats", asientosDisponibles)
+                intent.putExtra("asientosDisponibles", asientosDisponibles)
                 intent.putExtra("pos", p0)
                 context!!.startActivity(intent)
-
             }
             return vista
         }
