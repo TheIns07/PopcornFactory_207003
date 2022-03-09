@@ -5,4 +5,5 @@
     <color name="background_intro">#1D1D1D</color>
     <color name="button_background">#FFD501</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="grau">#676767</color>
 </resources>
